@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Money
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - Item
+  - Effect
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 4047410099
+    locked: 0
+  - name: Player
+    uniqueID: 1409164847
+    locked: 0
+  - name: Enemy
+    uniqueID: 3347164737
+    locked: 0
+  - name: Effect
+    uniqueID: 612852007
+    locked: 0
+  - name: Items
+    uniqueID: 3871010367
+    locked: 0
+  - name: UI
+    uniqueID: 3082704597
+    locked: 0

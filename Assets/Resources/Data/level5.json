@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "waveTimer": 20,
+    "enemys": [
+      {
+        "enemyName": "enemy1",
+        "timeAxis": 1,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy1",
+        "timeAxis": 4,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy1",
+        "timeAxis": 8,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 12,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 16,
+        "count": 3
+      }
+    ]
+  },
+  
+  {
+    "id": 2,
+    "waveTimer": 20,
+    "enemys": [
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 1,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 4,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy4",
+        "timeAxis": 7,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy5",
+        "timeAxis": 10,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy1",
+        "timeAxis": 13,
+        "count": 3
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 16,
+        "count": 3
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "waveTimer": 20,
+    "enemys": [
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 1,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 4,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy4",
+        "timeAxis": 7,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy5",
+        "timeAxis": 10,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy1",
+        "timeAxis": 13,
+        "count": 3
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 16,
+        "count": 3
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "waveTimer": 20,
+    "enemys": [
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 1,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 4,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy4",
+        "timeAxis": 7,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 10,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy5",
+        "timeAxis": 13,
+        "count": 4
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 16,
+        "count": 4
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "waveTimer": 20,
+    "enemys": [
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 1,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 4,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy4",
+        "timeAxis": 7,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy3",
+        "timeAxis": 10,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy5",
+        "timeAxis": 13,
+        "count": 5
+      },
+      {
+        "enemyName": "enemy2",
+        "timeAxis": 16,
+        "count": 5
+      }
+    ]
+  }
+]
