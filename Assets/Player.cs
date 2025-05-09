@@ -104,7 +104,32 @@ public class Player : MonoBehaviour
         float moveHorizontal = Input.GetAxisRaw("Horizontal");  // -1 0 1
         float moveVertical = Input.GetAxisRaw("Vertical");
 
+#if UNITY_ANDROID
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            Debug.Log("123");
+            Vector2 startPos = touch.rawPosition;
+            Vector2 movePos = touch.position;   
+
+            Vector2 touchDir = movePos - startPos;
+
+            if (Math.Abs(touchDir.x) > 20)
+            { 
+                moveHorizontal = touchDir.x > 0 ? 1 : -1;
+            }
+
+            if (Math.Abs(touchDir.y) > 20)
+            {
+                moveVertical = touchDir.y > 0 ? 1 : -1;
+            }
+        }
+#endif
+
         Vector2 moveMent = new Vector2(moveHorizontal, moveVertical);
+
+        Debug.Log(moveMent);
         
         moveMent.Normalize();
         transform.Translate(moveMent * GameManager.Instance.propData.speed
