@@ -109,27 +109,21 @@ public class Player : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            Debug.Log("123");
             Vector2 startPos = touch.rawPosition;
             Vector2 movePos = touch.position;   
 
             Vector2 touchDir = movePos - startPos;
 
-            if (Math.Abs(touchDir.x) > 20)
+            if (Math.Abs(touchDir.x) > 20 || Math.Abs(touchDir.y) > 20)
             { 
-                moveHorizontal = touchDir.x > 0 ? 1 : -1;
-            }
-
-            if (Math.Abs(touchDir.y) > 20)
-            {
-                moveVertical = touchDir.y > 0 ? 1 : -1;
+                touchDir.Normalize();
+                moveHorizontal = touchDir.x;
+                moveVertical = touchDir.y;
             }
         }
 #endif
 
         Vector2 moveMent = new Vector2(moveHorizontal, moveVertical);
-
-        Debug.Log(moveMent);
         
         moveMent.Normalize();
         transform.Translate(moveMent * GameManager.Instance.propData.speed

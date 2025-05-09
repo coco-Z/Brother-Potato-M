@@ -303,7 +303,7 @@ public class ShopPanel : MonoBehaviour
     //购物按钮
     public bool Shopping(ItemData itemData)
     {
-        if (GameManager.Instance.money < 3 )
+        if (GameManager.Instance.money < itemData.price )
         {
             return false;
         }

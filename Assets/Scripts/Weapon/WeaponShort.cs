@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponShort: WeaponBase
 {
-    
+
     public new void Awake()
     {
         base.Awake();
@@ -32,35 +32,30 @@ public class WeaponShort: WeaponBase
        
     IEnumerator GoPosition(Vector3 enemyPosition)
     {
-        var enemyPos = enemyPosition + new Vector3(0, enemy.GetComponent<SpriteRenderer>().size.y / 2, 0);
-         
-        while (Vector2.Distance(transform.position, enemyPos) > 0.1f)
+        Vector3 enemyPos = enemyPosition + new Vector3(0, enemy.GetComponent<SpriteRenderer>().size.y / 2, 0);
+
+        while (Vector2.Distance(transform.position, enemyPos) > 0.1f && enemy != null)
         {
-            Vector3 direction = (enemyPos - transform.position).normalized;
+            Vector3 direction = Vector3.MoveTowards(transform.position, enemyPos, moveSpeed * Time.deltaTime);
+            transform.position = direction;
 
-            Vector3 moveAmount = direction * moveSpeed * Time.deltaTime;
-
-            transform.position += moveAmount;
-             
             yield return null;
         }
 
-
-        //关闭碰撞器
+        // 关闭碰撞器
         gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
 
         StartCoroutine(ReturnPosition());
-            
-
     }
 
 
     IEnumerator ReturnPosition()
     {
-        while ((Vector3.zero - transform.localPosition).magnitude > 0.1f )
+        while ( Vector2.Distance(Vector2.zero, transform.localPosition) > 0.5f)
         {
-            Vector3 direction = (Vector3.zero - transform.localPosition).normalized;
-            transform.localPosition += direction * moveSpeed * Time.deltaTime;
+            Vector3 direction = Vector3.MoveTowards(transform.localPosition, Vector3.zero, moveSpeed * Time.deltaTime);
+            transform.localPosition = direction;
+
             yield return null;
         }
 
